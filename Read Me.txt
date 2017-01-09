@@ -1,5 +1,5 @@
 In this folder for a “quick start” are present all the macros I wrote for the analysis of Limadu data, between 8 November and 22 December. 
- Let’s now list “how to use them and what do they do”!
+Let’s now list “how to use them and what do they do”!
 
 
 1) cal_Silicons: it needs one calibration file taken for silicon layers and it returns one txt (give a look to the Series() method) file with the calibration of silicon for that specific energy and particle (please notice that for proton you should choose the right calibration, taking care of the active ladders/columns).

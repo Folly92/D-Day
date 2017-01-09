@@ -1,0 +1,25 @@
+In this folder for a “quick start” are present all the macros I wrote for the analysis of Limadu data, between 8 November and 22 December. 
+Let’s now list “how to use them and what do they do”!
+
+
+1) cal_Silicons: it needs one calibration file taken for silicon layers and it returns one txt (give a look to the Series() method) file with the calibration of silicon for that specific energy and particle (please notice that for proton you should choose the right calibration, taking care of the active ladders/columns).
+
+2) Silicon_analysis_cls5.cxx: as one can immagine it is the corpus of the silicon layers analysis. The code is well commented and described. It needs the data files, (look at the series method)
+
+If it is the first time that you launch it please remember that it needs the calibration files (see above). There are much more things to do, before it works correctly.
+-1 comment the lines 366-491, because they need the files “analysis”, which are provided after the first launch
+-2 comment also the lines between 686-695, because they need the files “fitting_param”, which are provided after the first launch
+-3 (don’t know if really needed) comment lines 992-993 and the part “*Correction_1(eta,p0_read[side][int(mycl.seed*6/n_chann)],p1_read[side][int(mycl.seed*6/n_chann)],p2_read[side][int(mycl.seed*6/n_chann)])” of line 991. They need the file “fitting param as well” 
+-4 uncomment lines 1049-1056 that write the file “fitting_param”(seed above)
+-5 try if it works :)
+
+If it worked correctly, it should produce all the file, plots you need for the next and finale step of the analysis. In particular it returns the “langau_param” file, useful later for the fits
+
+3)langau_fit.cxx: it is the macro for the langau fit, last step of my analysis (if you are running protons and 70 MeV protons have the beam aligned with other runs remember to delete the corresponding lines from the langau_param files (starting from 1, lines from 7 to 12)). It will produce a nicer output for the langau parameters and a plot showing the fits. 
+
+4)muons.cxx: all analysis for muons! Without calibration it need only the data file and returns all the analysis, it needs to be commented and fixed in some points I think. I produced it vary rapidly for cross check and so there is a non zero probability that it does not work perfectly. You can easily rebuild it, by merging file(1) and file(2). It would take a while.
+
+
+That’s all, enjoy!
+
+

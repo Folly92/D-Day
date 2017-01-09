@@ -13,7 +13,7 @@ If it is the first time that you launch it please remember that it needs the cal
 -4 uncomment lines 1049-1056 that write the file “fitting_param”(seed above)
 -5 try if it works :)
 
-If it worked correctly, it should produce all the file, plots you need for the next and finale step of the analysis. In particular it returns the “langau_param” file, useful later for the fits
+If it worked correct it should produce all the file, plots you need for the next and finale step of the analysis. In particular it returns the “langau_param” file, useful later for the fits
 
 3)langau_fit.cxx: it is the macro for the langau fit, last step of my analysis (if you are running protons and 70 MeV protons have the beam aligned with other runs remember to delete the corresponding lines from the langau_param files (starting from 1, lines from 7 to 12)). It will produce a nicer output for the langau parameters and a plot showing the fits. 
 

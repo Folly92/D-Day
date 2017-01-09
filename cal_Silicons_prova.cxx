@@ -24,7 +24,7 @@
 #include <algorithm>
 #include <fstream>  
 
-
+//cambiamento scemo
 const int n_chann = 4608; //number of channels 
 const int n_steps = 1; // number of steps of 1000 events
 int n_ev = 0; //number of events per step, default value. I assign it later in the code
